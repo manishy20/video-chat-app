@@ -3,7 +3,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 const SocketContext = createContext();
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("https://video-chat-app-mky.herokuapp.com");
 
 const ContextProvider = ({ children }) => {
   const [me, setMe] = useState("");
