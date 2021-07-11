@@ -4,14 +4,15 @@ const app = express()
 const server = http.createServer(app)
 const port = process.env.PORT || 5000;
 const cors= require("cors");
+app.use(cors());
+
 const io = require("socket.io")(server, {
     cors: {
-        origin: "https://video-chat-app-mky.herokuapp.com",
+        origin: "*",
         methods: ["GET", "POST"]
     }
 })
 
-app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('server is running');
