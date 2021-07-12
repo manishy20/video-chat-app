@@ -6,6 +6,7 @@ import { SocketContext } from "../SocketContext";
 const useStyles = makeStyles((theme) => ({
   video: {
     width: "400px",
+    maxHeight: "300px",
     align: "center",
     alignItems: "center",
     alignContent: "center",
